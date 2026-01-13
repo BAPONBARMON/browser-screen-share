@@ -1,0 +1,104 @@
+*{
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:#0f172a;
+  color:#fff;
+}
+
+/* STATUS BAR */
+#statusBar{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px;
+  background:#020617;
+}
+
+#spinner{
+  width:18px;
+  height:18px;
+  border:3px solid #444;
+  border-top:3px solid #22c55e;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg);}
+}
+
+.connected #spinner{
+  display:none;
+}
+
+/* CARD */
+.card{
+  padding:15px;
+  max-width:420px;
+  margin:10px auto;
+  background:#020617;
+  border-radius:10px;
+}
+
+#myCode{
+  font-size:28px;
+  text-align:center;
+  margin:10px 0;
+  letter-spacing:5px;
+}
+
+#connectSection{
+  display:flex;
+  gap:10px;
+}
+
+input,button{
+  flex:1;
+  padding:10px;
+  border-radius:6px;
+  border:none;
+}
+
+button{
+  background:#22c55e;
+  font-weight:bold;
+}
+
+.hidden{
+  display:none;
+}
+
+/* VIEWER */
+#viewer{
+  position:relative;
+  width:100%;
+  max-width:100%;
+}
+
+video{
+  width:100%;
+  background:black;
+}
+
+canvas{
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+/* TOOLS */
+#tools{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  padding:10px;
+}
+
+#tools button{
+  background:#334155;
+  color:#fff;
+}
