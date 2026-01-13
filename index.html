@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Live Screen Learn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+
+<body>
+
+<!-- TOP STATUS BAR -->
+<div id="statusBar">
+  <div id="spinner"></div>
+  <span id="statusText">Connecting to server...</span>
+</div>
+
+<!-- MAIN CARD -->
+<div class="card">
+
+  <div id="codeSection">
+    <h3>Your Code</h3>
+    <div id="myCode">----</div>
+  </div>
+
+  <div id="connectSection">
+    <input type="number" id="joinCode" placeholder="Enter 4-digit code">
+    <button id="connectBtn">Connect</button>
+  </div>
+
+  <div id="sessionBar" class="hidden">
+    <span>Connected ⏱️ <span id="timer">00:00</span></span>
+    <button id="disconnectBtn">Disconnect</button>
+  </div>
+
+</div>
+
+<!-- LIVE VIEW AREA -->
+<div id="viewer">
+  <video id="screenVideo" autoplay playsinline></video>
+  <canvas id="drawCanvas"></canvas>
+</div>
+
+<!-- TOOLS -->
+<div id="tools">
+  <button data-tool="draw">✏️</button>
+  <button data-tool="circle">⭕</button>
+  <button data-tool="arrow">➡️</button>
+  <button id="clearBtn">🧹</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
